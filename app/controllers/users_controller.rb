@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   def show
     user = User.find(params[:id])
     
-    render component: "User", props: {user}
+    render component: "User", props: {user: user}
   end
 
   #(C)reate
