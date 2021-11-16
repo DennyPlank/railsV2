@@ -6,12 +6,14 @@ import React from "react";
 const Users = (props) => {
  
   const renderUsers = () => {
-    console.log("renderUsers called");
+    console.log(props);
+    console.log("renderUser was hit");
     return props.users.map((user) => {
       return (
         <div>
-          <h1>{user.title}</h1>
-          <p>{user.description}</p>
+          <h1>{user.fullName}</h1>
+          <p>{user.age}</p>
+          <p>{user.gender}</p>
         </div>
       );
     });

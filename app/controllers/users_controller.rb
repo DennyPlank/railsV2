@@ -9,10 +9,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    user = user.find(params[:id])
-    #find user and show it (1 car by id)
-    # render car
-    render component: "User"
+    user = User.find(params[:id])
+    
+    render component: "User", props: {user}
   end
 
   #(C)reate
