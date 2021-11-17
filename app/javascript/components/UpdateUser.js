@@ -1,8 +1,8 @@
 import React from "react"
 
 const UpdateUser = (props) => {
-   
-   let id = parseInt(props.id)
+   console.log("update called!")
+   let id = props.id
     return (
         <div>
             <form action={'/users/' + id} method="put"> 
