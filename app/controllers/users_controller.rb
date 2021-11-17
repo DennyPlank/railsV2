@@ -14,14 +14,12 @@ class UsersController < ApplicationController
     render component: "User", props: {user: user}
   end
 
-  #(C)reate
   def new
-    # render new form
+
     render component: "NewUser"
   end
 
   def create
-    # create car(from from UI) to our db
     User.create(
         fullName: params[:name],
         age: params[:age],
@@ -30,31 +28,29 @@ class UsersController < ApplicationController
     index
   end
 
-  #(U)pdate
+
   def edit
-    #we need to find car in DB to update
     user = User.find(params[:id])
-    # render update form
     render component: "UpdateUser", props: {id: params[:id]}
   end
 
   def update
-    # find car to Update
+
     user = User.find(params[:id])
-    # update car(from from UI) to our db
+
     user.update(
         fullName: params[:fullName], 
         age: params[:age],
         gender: params[:gender]
     )
+    
   end
 
-  #(D)elete
+
   def destroy
-    # find car to Delete
     user = User.find(params[:id])
-    # Delete
     user.destroy
+    index
   end
 
   private

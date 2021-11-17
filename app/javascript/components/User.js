@@ -11,6 +11,7 @@ const User = (props) => {
           <p>{user.age}</p>
           <p>{user.gender}</p>
         </div>
+        
       );
 };
 

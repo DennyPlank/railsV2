@@ -10,8 +10,10 @@ post "/users", to: "users#create"
 
 get "/users/:id/edit", to: "users#edit"
 
-patch "/users/:id", to: "users#update"
+put "/users/:id", to: "users#update"
 
 delete "/users/:id", to: "users#destroy"
+
+get "/users/:id/destroy", to: "users#destroy"
 
 end
