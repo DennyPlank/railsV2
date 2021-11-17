@@ -10,7 +10,7 @@ post "/users", to: "users#create"
 
 get "/users/:id/edit", to: "users#edit"
 
-put "/users/:id", to: "users#update"
+patch "/users/:id", to: "users#update"
 
 delete "/users/:id", to: "users#destroy"
 

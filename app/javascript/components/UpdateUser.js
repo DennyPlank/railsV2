@@ -1,9 +1,11 @@
 import React from 'react'
 
-const NewUser = (props) => {
+const UpdateUser = (props) => {
+   
+   let id = props.id
     return (
         <div>
-            <form action="/users" method="post"> 
+            <form action={'/users/' + id} method="patch"> 
               <label for="name">Name</label>
               <input type="text" id="name" name="fullName"></input>
               <label for="age">Age</label>
@@ -17,4 +19,4 @@ const NewUser = (props) => {
     )
 }
 
-export default NewUser;
+export default UpdateUser;
